@@ -21,6 +21,11 @@ jobs:
       run: npm install
 
     - name: Setup Chrome
+      uses: browser-actions/setup-chrome@latest
+      with:
+        chrome-version: stable
+      
+    - name: Check Chrome
       run: chrome --version
 
     - name: Update
