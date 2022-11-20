@@ -21,6 +21,7 @@ async function updateAllCodesRanking() {
     //await driver.findElement(By.id('update_all_codes_ranking')).click();
   } catch (ex) {
     console.log(ex);
+    console.log(await driver.getPageSource());
   } finally {
     console.log('quit');
     await driver.quit();
