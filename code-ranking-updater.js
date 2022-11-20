@@ -1,7 +1,6 @@
 const { By, Builder } = require("selenium-webdriver");
-require('chromedriver')
-const chrome = require('selenium-webdriver/chrome')
-const fs = require("fs")
+require('chromedriver');
+const chrome = require('selenium-webdriver/chrome');
 
 async function updateAllCodesRanking() {
   let driver = await new Builder()
