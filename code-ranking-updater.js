@@ -9,7 +9,7 @@ async function updateAllCodesRanking() {
     .build();
   try {
     await driver.get('https://www.topparrain.com/en/users/sign_in');
-    await driver.findElement(By.xpath("//button[@aria-label='Consent']")).click();
+    //await driver.findElement(By.xpath("//button[@aria-label='Consent']")).click();
     await driver.findElement(By.id('user_email')).sendKeys('ngmg.test@gmail.com');
     let field = await driver.findElement(By.id('user_password'));
     for (let i = 0; i < 8; i++) {
