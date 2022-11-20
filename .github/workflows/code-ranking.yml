@@ -28,5 +28,5 @@ jobs:
     - name: Check Chrome
       run: chrome --version
 
-    - name: Update
+    - name: Update Code Ranking
       run: node code-ranking-updater.js
