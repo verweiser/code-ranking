@@ -27,5 +27,5 @@ async function updateAllCodesRanking() {
   }
 }
 
-updateAllCodesRanking()
+updateAllCodesRanking();
 
