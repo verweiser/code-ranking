@@ -1,0 +1,11 @@
+{
+  "name": "code-ranking",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chromedriver": "^107.0.3"
+    "selenium-webdriver": "^4.5.0"
+  }
+}
