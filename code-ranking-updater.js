@@ -18,7 +18,7 @@ async function updateAllCodesRanking() {
     await field.sendKeys('8!');
     await driver.findElement(By.xpath("//input[@value='Log in']")).click();
     await driver.get('https://www.topparrain.com/en/referral_codes');
-    //await driver.findElement(By.id('update_all_codes_ranking')).click();
+    await driver.findElement(By.id('update_all_codes_ranking')).click();
     console.log(await driver.findElement(By.id('update_ranking')).findElement(By.xpath('./div[2]/div')).getText());
   } catch (ex) {
     console.log(ex);
