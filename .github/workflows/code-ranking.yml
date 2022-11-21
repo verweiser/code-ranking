@@ -2,7 +2,7 @@ name: Code Ranking
 
 on:
   schedule:
-    - cron: '0 0,6-23 * * 0-6'
+    - cron: '0 0,5-23 * * 0-6'
 
 jobs:
   deploy:
