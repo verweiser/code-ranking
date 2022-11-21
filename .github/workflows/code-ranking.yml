@@ -17,6 +17,8 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
+      run: npm i -g npm-check-updates
+      run: ncu -u
       run: npm install
 
     - name: Setup Chrome
