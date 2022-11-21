@@ -1,9 +1,11 @@
 name: Code Ranking
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '0 0,5-23 * * 0-6'
-    - cron: '30 9 * * 0-6'
 
 jobs:
   deploy:
@@ -18,7 +20,7 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      run: 
+      run: |
         npm i -g npm-check-updates
         ncu -u
         npm install
