@@ -19,12 +19,6 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Install dependencies
-      run: |
-        npm i -g npm-check-updates
-        ncu -u
-        npm install
-
     - name: Setup Chrome
       uses: browser-actions/setup-chrome@latest
       
