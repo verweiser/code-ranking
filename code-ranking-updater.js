@@ -8,9 +8,10 @@ async function updateAllCodesRanking(args) {
     .setChromeOptions(new chrome.Options().headless())
     .build();
   try {
-    await driver.get(args[0] + '/users/sign_in');
-    console.log('>>' + args[0] + '/users/sign_in');
-    console.log('>>' + driver.getCurrentUrl());
+    let url = args[0] + '/users/sign_in';
+    await driver.get(url);
+    console.log('>>' + url);
+    console.log('>>' + (await driver.getCurrentUrl()));
     console.log(await driver.getPageSource());
     //await driver.findElement(By.xpath("//button[@aria-label='Consent']")).click();
     await driver.findElement(By.id('user_email')).sendKeys(args[1]);
