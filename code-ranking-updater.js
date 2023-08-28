@@ -10,15 +10,13 @@ async function updateAllCodesRanking(args) {
   try {
     let url = args[0] + '/users/sign_in';
     await driver.get(url);
-    console.log('>>' + url);
-    console.log('>>' + (await driver.getCurrentUrl()));
-    console.log(await driver.getPageSource());
     //await driver.findElement(By.xpath("//button[@aria-label='Consent']")).click();
     await driver.findElement(By.id('user_email')).sendKeys(args[1]);
     await driver.findElement(By.id('user_password')).sendKeys(args[2]);
     await driver.findElement(By.xpath("//input[@value='Log in']")).click();
     await driver.get(args[0] + '/referral_codes');
     await driver.findElement(By.id('update_all_codes_ranking')).click();
+    console.log('>> RESULT');
     console.log(await driver.findElement(By.id('update_ranking')).findElement(By.xpath('./div[2]/div')).getText());
   } catch (ex) {
     console.log(ex);
