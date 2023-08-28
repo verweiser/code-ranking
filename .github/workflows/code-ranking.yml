@@ -32,4 +32,4 @@ jobs:
       run: chrome --version
 
     - name: Update Code Ranking
-      run: node code-ranking-updater.js $URL ${{secrets.EMAIL}} ${{secrets.PASSWORD}}
+      run: node code-ranking-updater.js ${{vars.URL}} ${{secrets.EMAIL}} ${{secrets.PASSWORD}}
