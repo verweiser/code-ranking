@@ -18,12 +18,10 @@ async function updateAllCodesRanking(args) {
     await driver.findElement(By.xpath("//input[@value='Log in']")).click();
     console.log('>> AFTER LOGIN');
     console.log(await driver.getCurrentUrl());
-    console.log(await driver.getPageSource());
     console.log('<< AFTER LOGIN');
-    await driver.get(args[0] + '/referral_codes');
+    await driver.get(args[0] + '/en/referral_codes');
     console.log('>> CODES');
     console.log(await driver.getCurrentUrl());
-    console.log(await driver.getPageSource());
     await driver.findElement(By.id('update_all_codes_ranking')).click();
     console.log('>> RESULT');
     console.log(await driver.findElement(By.id('update_ranking')).findElement(By.xpath('./div[2]/div')).getText());
