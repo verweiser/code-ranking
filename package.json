@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
-    "chromedriver": "^117.0.0",
+    "chromedriver": "^119.0.0",
     "selenium-webdriver": "^4.5.0"
   }
 }
