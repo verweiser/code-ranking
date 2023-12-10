@@ -18,6 +18,7 @@ async function updateAllCodesRanking(args) {
     await driver.findElement(By.xpath("//input[@value='Log in']")).click();
     console.log('>> AFTER LOGIN');
     console.log(await driver.getCurrentUrl());
+        console.log(await driver.getPageSource());
     console.log('<< AFTER LOGIN');
     await driver.get(args[0] + '/en/referral_codes');
     console.log('>> CODES');
