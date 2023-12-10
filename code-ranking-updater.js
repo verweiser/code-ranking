@@ -12,6 +12,7 @@ async function updateAllCodesRanking(args) {
     await driver.get(url);
     console.log('>> LOGIN');
     console.log(await driver.getCurrentUrl());
+        console.log(await driver.getPageSource());
     //await driver.findElement(By.xpath("//button[@aria-label='Consent']")).click();
     await driver.findElement(By.id('user_email')).sendKeys(args[1]);
     await driver.findElement(By.id('user_password')).sendKeys(args[2]);
