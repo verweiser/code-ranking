@@ -16,6 +16,7 @@ async function updateAllCodesRanking(args) {
     //await driver.findElement(By.xpath("//button[@aria-label='Consent']")).click();
     await driver.findElement(By.id('user_email')).sendKeys(args[1]);
     await driver.findElement(By.id('user_password')).sendKeys(args[2]);
+    await driver.findElement(By.id('recaptcha-anchor')).click();
     await driver.findElement(By.xpath("//input[@value='Log in']")).click();
     console.log('>> AFTER LOGIN');
     console.log(await driver.getCurrentUrl());
