@@ -16,11 +16,14 @@ async function updateAllCodesRanking(args) {
     //await driver.findElement(By.xpath("//button[@aria-label='Consent']")).click();
     await driver.findElement(By.id('user_email')).sendKeys(args[1]);
     await driver.findElement(By.id('user_password')).sendKeys(args[2]);
-    //await driver.findElement(By.id('recaptcha-anchor')).click();
+    let iframe = await driver.findElement(By.xpath("//iframe[@title='reCAPTCHA']"));
+    await driver.switchTo().frame(iframe);
+    await driver.findElement(By.id('recaptcha-anchor')).click();
+    await driver.switchTo().defaultContent();
     await driver.findElement(By.xpath("//input[@value='Log in']")).click();
     console.log('>> AFTER LOGIN');
     console.log(await driver.getCurrentUrl());
-        console.log(await driver.getPageSource());
+    console.log(await driver.getPageSource());
     console.log('<< AFTER LOGIN');
     await driver.get(args[0] + '/en/referral_codes');
     console.log('>> CODES');
