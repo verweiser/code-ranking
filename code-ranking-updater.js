@@ -8,7 +8,7 @@ async function updateAllCodesRanking(args) {
     .setChromeOptions(new chrome.Options().headless())
     .build();
   try {
-    let url = args[0] + '/users/sign_in?locale=en';
+    let url = args[0] + '/en/users/sign_in?locale=en';
     await driver.get(url);
     console.log('>> LOGIN');
     console.log(await driver.getCurrentUrl());
